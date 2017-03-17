@@ -12,7 +12,7 @@ Relative Projects
 
 * [mare-remotedebug](https://github.com/muzuiget/mare-remotedebug)
 * [mare-devtools-frontend](https://github.com/muzuiget/mare-devtools-frontend)
-* [mare-runner](https://github.com/muzuiget/mare-devtools-frontend)
+* [mare-runner](https://github.com/muzuiget/mare-runner)
 
 Licence
 -------
