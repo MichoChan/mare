@@ -5,6 +5,8 @@ Mare - Lua 5.3 Debugger
 
 [查看官网](http://mare.ejoy.com/)
 
+*本项目仍然出于早期开发阶段*
+
 特性
 ----
 
