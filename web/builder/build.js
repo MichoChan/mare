@@ -43,7 +43,7 @@ const copyWebRoot = () => {
             './src/webroot/index.prod.html',
             './dist/webroot/index.html');
 
-        const devtools = './bower_components/mare-devtools-frontend/front_end/';
+        const devtools = './bower_components/mare-devtools-frontend/devtools/';
         if (fs.existsSync(devtools)) {
             fsUtils.copyFolder(devtools, './dist/webroot/devtools');
         }

@@ -1,5 +1,8 @@
 {
   "name": "mare-web",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "mare-devtools-frontend": "https://github.com/muzuiget/mare-devtools-frontend/releases/download/v0.1.0/mare-devtools-frontend.zip"
+  }
 }

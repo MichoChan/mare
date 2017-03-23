@@ -48,6 +48,7 @@
     "build": "babel-node builder/build.js",
     "dist-server": "node dist/index.js",
     "lint": "babel-node builder/lint.js",
+    "postinstall": "bower install",
     "start": "babel-node index.dev.js"
   }
 }
