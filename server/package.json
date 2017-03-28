@@ -1,7 +1,6 @@
 {
   "name": "mare-server",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.2.0",
   "devDependencies": {
     "babel-cli": "6.23.0",
     "babel-eslint": "7.1.1",
