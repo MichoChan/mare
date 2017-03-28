@@ -1,8 +1,4 @@
-local msgpack = require('MessagePack')
-
-msgpack.set_array('without_hole')
-msgpack.set_number('double')
-msgpack.set_string('binary')
+local msgpack = require('cmsgpack')
 
 local encode = function(obj)
     return msgpack.pack(obj)
