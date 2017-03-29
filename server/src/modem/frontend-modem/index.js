@@ -290,4 +290,20 @@ export class FrontendModem extends EventEmitter {
         };
         this.sendBackend({method, params});
     }
+
+    startProfile = async (reqId) => {
+        const method = 'behavior.profileStart';
+        const params = {
+            parrot: {id: reqId},
+        };
+        this.sendBackend({method, params});
+    }
+
+    stopProfile = async (reqId) => {
+        const method = 'behavior.profileStop';
+        const params = {
+            parrot: {id: reqId},
+        };
+        this.sendBackend({method, params});
+    }
 }
