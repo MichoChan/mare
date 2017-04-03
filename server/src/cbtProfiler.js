@@ -34,28 +34,15 @@ const doConvert = (rows, nm) => {
             scriptId: '0',
             url: '',
         },
-        children: [2],
-        hitCount: 0,
-    };
-    const endNode = {
-        id: 2,
-        callFrame: {
-            columnNumber: -1,
-            functionName: '(end)',
-            lineNumber: -1,
-            scriptId: '0',
-            url: '',
-        },
         children: [],
         hitCount: 0,
     };
-    let nodeCounter = 2;
+    let nodeCounter = 1;
 
-    const nodes = [rootNode, endNode];
+    const nodes = [rootNode];
     const samples = [];
     const timeDeltas = [1000];
 
-    console.log(rows);
     for (let i = 0; i < rows.length; i++) {
         const row = rows[i];
         const funcs = row.funcs;
@@ -72,8 +59,6 @@ const doConvert = (rows, nm) => {
                 break;
             }
         }
-
-        console.log(i, funcs.length, diff);
 
         row.nodes = funcs.map(() => null);
         for (let j = 0; j < funcs.length; j++) {
@@ -137,7 +122,7 @@ const doConvert = (rows, nm) => {
         lastNode.hitCount += 1;
     }
 
-    samples.push(endNode.id);
+    samples.push(rows[rows.length - 1].nodes[0].id);
 
     const startTime = new Date().getTime();
     let endTime = startTime;
