@@ -42,7 +42,7 @@ const httpServer = http.createServer(app);
         ],
         [
             '/devtools/',
-            `${bc.devtoolsFrontend}/devtools`,
+            bc.devtoolsFrontend,
         ],
     ];
     const option = {fallthrough: false};

@@ -4,6 +4,7 @@ import rimraf from 'rimraf';
 import webpack from 'webpack';
 import fsUtils from './lib/fs-utils';
 import webpackConfig from './webpack-config.prod';
+import bc from './build-config';
 
 const runWebpackBuild = () => {
     return new Promise((resolve, reject) => {
@@ -43,7 +44,7 @@ const copyWebRoot = () => {
             './src/webroot/index.prod.html',
             './dist/webroot/index.html');
 
-        const devtools = './bower_components/mare-devtools-frontend/devtools/';
+        const devtools = bc.devtoolsFrontend;
         if (fs.existsSync(devtools)) {
             fsUtils.copyFolder(devtools, './dist/webroot/devtools');
         }

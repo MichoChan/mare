@@ -12,7 +12,6 @@
     "babel-preset-react": "6.23.0",
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-0": "6.22.0",
-    "bower": "1.8.0",
     "css-loader": "0.26.1",
     "del": "2.2.2",
     "eslint": "3.17.1",
@@ -22,6 +21,7 @@
     "glob": "7.1.1",
     "html-loader": "0.4.4",
     "json-loader": "0.5.4",
+    "mare-devtools-frontend": "0.1.0",
     "minimist": "1.2.0",
     "node-sass": "4.0.0",
     "postcss-loader": "1.2.0",
@@ -43,11 +43,9 @@
     "http-proxy": "1.16.2"
   },
   "scripts": {
-    "bower": "bower",
     "build": "babel-node builder/build.js",
     "dist-server": "node dist/index.js",
     "lint": "babel-node builder/lint.js",
-    "postinstall": "bower install",
     "start": "babel-node index.dev.js"
   }
 }
