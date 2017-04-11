@@ -21,7 +21,7 @@
     "glob": "7.1.1",
     "html-loader": "0.4.4",
     "json-loader": "0.5.4",
-    "mare-devtools-frontend": "0.1.0",
+    "mare-devtools-frontend-dist": "0.1.1",
     "minimist": "1.2.0",
     "node-sass": "4.0.0",
     "postcss-loader": "1.2.0",

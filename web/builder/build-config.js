@@ -5,7 +5,7 @@ import minimist from 'minimist';
 const defaultConfig = {
     apiServerUrl: 'http://127.0.0.1:9223/',
     localServerUrl: 'http://127.0.0.1:8001/',
-    devtoolsFrontend: 'node_modules/mare-devtools-frontend/front_end',
+    devtoolsFrontend: 'node_modules/mare-devtools-frontend-dist/front_end',
 };
 
 const fileConfig = do {
