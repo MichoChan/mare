@@ -13,13 +13,13 @@ local Pace = class({
         return step and step.is_return
     end,
 
-    prev_step_is_call = function(self)
+    prev_step_is_ambi_call = function(self)
         local step = self.prev_step
-        return step and step.is_call and step.scope ~= 'c'
+        return step and step.is_ambi_call and step.scope ~= 'c'
     end,
 
     match_over = function(self, step)
-        return self.call_depth == 0 and (not step.is_call)
+        return self.call_depth == 0 and (not step.is_ambi_call)
     end,
 
     -- luacheck: no unused args
@@ -29,7 +29,7 @@ local Pace = class({
     -- luacheck: unused args
 
     match_into = function(self, step)
-        if self.call_depth > 0 and self:prev_step_is_call() then
+        if self.call_depth > 0 and self:prev_step_is_ambi_call() then
             return true
         end
 
@@ -39,7 +39,7 @@ local Pace = class({
 
     match = function(self, step)
         -- 忽略进入 C 函数
-        if step.is_call and step.scope == 'c' then
+        if step.is_ambi_call and step.scope == 'c' then
             return false
         end
 
@@ -60,7 +60,7 @@ local Pace = class({
 
     trace = function(self, step)
         local depth = self.call_depth
-        if step.is_call then
+        if step.is_normal_call then
             depth = depth + 1
         elseif step.is_return then
             depth = depth - 1
